@@ -4,5 +4,5 @@
 #
 repository:
   description: Install and configure Metricbeat, manage Metricbeat modules.
-  homepage: https://robertdebock.nl/
+  homepage: https://buluma.github.io/
   topics: metricbeat, ansible, molecule, tox, playbook, hacktoberfest
