@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-metricbeat/tree/HEAD)
+## [v0.1.2](https://github.com/buluma/ansible-role-metricbeat/tree/v0.1.2) (2022-05-13)
 
-[Full Changelog](https://github.com/buluma/ansible-role-metricbeat/compare/v0.1.1...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-metricbeat/compare/v0.1.1...v0.1.2)
 
 **Closed issues:**
 
