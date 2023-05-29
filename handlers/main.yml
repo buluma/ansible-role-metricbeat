@@ -3,7 +3,8 @@
 
 - name: Metricbeat setup
   ansible.builtin.command:
-    cmd: Metricbeat setup
+    cmd: metricbeat setup
+  changed_when: yes
 
 - name: Restart metricbeat
   ansible.builtin.service:
