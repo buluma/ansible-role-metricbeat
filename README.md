@@ -4,11 +4,12 @@ Install and configure Metricbeat, manage Metricbeat modules.
 
 |GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
 |------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-metricbeat/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-metricbeat/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-metricbeat/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-metricbeat)|[![quality](https://img.shields.io/ansible/quality/58806)](https://galaxy.ansible.com/buluma/metricbeat)|[![downloads](https://img.shields.io/ansible/role/d/58806)](https://galaxy.ansible.com/buluma/metricbeat)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-metricbeat.svg)](https://github.com/buluma/ansible-role-metricbeat/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-metricbeat.svg)](https://github.com/buluma/ansible-role-metricbeat/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-metricbeat.svg)](https://github.com/buluma/ansible-role-metricbeat/pulls/)|
+|[![github](https://github.com/buluma/ansible-role-metricbeat/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-metricbeat/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-metricbeat/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-metricbeat)|[![quality](https://img.shields.io/ansible/quality/58806)](https://galaxy.ansible.com/buluma/metricbeat)|[![downloads](https://img.shields.io/ansible/role/d/58806)](https://galaxy.ansible.com/buluma/metricbeat)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-metricbeat.svg)](https://github.com/buluma/ansible-role-metricbeat/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-metricbeat.svg)](https://github.com/buluma/ansible-role-metricbeat/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-metricbeat.svg)](https://github.com/buluma/ansible-role-metricbeat/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
-This example is taken from `molecule/default/converge.yml` and is tested on each push, pull request and release.
+This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-metricbeat/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
+
 ```yaml
 ---
 - name: converge
@@ -24,7 +25,8 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
           state: enabled
 ```
 
-The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
+The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-metricbeat/blob/master/molecule/default/prepare.yml):
+
 ```yaml
 ---
 - name: prepare
@@ -38,16 +40,18 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
     - role: buluma.elastic_repo
 ```
 
+Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
 
 ## [Role Variables](#role-variables)
 
-The default values for the variables are set in `defaults/main.yml`:
+The default values for the variables are set in [`defaults/main.yml`](https://github.com/buluma/ansible-role-metricbeat/blob/master/defaults/main.yml):
+
 ```yaml
 ---
 # defaults file for metricbeat
 
 # The version of metricbeat to install.
-metricbeat_version: "7.15.2"
+metricbeat_version: "7.17.6"
 
 # A list of modules to enable.
 metricbeat_modules: []
@@ -68,17 +72,17 @@ metricbeat_kibana_host: "http://localhost:5601"
 
 ## [Requirements](#requirements)
 
-- pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-metricbeat/blob/main/requirements.txt).
+- pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-metricbeat/blob/master/requirements.txt).
 
-## [Status of used roles](#status-of-requirements)
+## [State of used roles](#state-of-used-roles)
 
 The following roles are used to prepare a system. You can prepare your system in another way.
 
 | Requirement | GitHub | GitLab |
 |-------------|--------|--------|
-|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-bootstrap)|
-|[buluma.core_dependencies](https://galaxy.ansible.com/buluma/core_dependencies)|[![Build Status GitHub](https://github.com/buluma/ansible-role-core_dependencies/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-core_dependencies/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-core_dependencies/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-core_dependencies)|
-|[buluma.elastic_repo](https://galaxy.ansible.com/buluma/elastic_repo)|[![Build Status GitHub](https://github.com/buluma/ansible-role-elastic_repo/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-elastic_repo/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-elastic_repo/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-elastic_repo)|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-bootstrap)|
+|[buluma.core_dependencies](https://galaxy.ansible.com/buluma/core_dependencies)|[![Build Status GitHub](https://github.com/buluma/ansible-role-core_dependencies/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-core_dependencies/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-core_dependencies/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-core_dependencies)|
+|[buluma.elastic_repo](https://galaxy.ansible.com/buluma/elastic_repo)|[![Build Status GitHub](https://github.com/buluma/ansible-role-elastic_repo/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-elastic_repo/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-elastic_repo/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-elastic_repo)|
 
 ## [Context](#context)
 
@@ -94,19 +98,18 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 
 |container|tags|
 |---------|----|
-|amazon|all|
-|debian|all|
-|el|7, 8|
-|fedora|all|
-|ubuntu|focal, bionic|
+|[Amazon](https://hub.docker.com/repository/docker/buluma/amazonlinux/general)|all|
+|[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|all|
+|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|all|
+|[Fedora](https://hub.docker.com/repository/docker/buluma/fedora/general)|all|
+|[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|focal, bionic|
+|[Kali](https://hub.docker.com/repository/docker/buluma/kali/general)|all|
 
-The minimum version of Ansible required is 2.10, tests have been done to:
+The minimum version of Ansible required is 2.12, tests have been done to:
 
 - The previous version.
 - The current version.
 - The development version.
-
-
 
 If you find issues, please register them in [GitHub](https://github.com/buluma/ansible-role-metricbeat/issues)
 
@@ -116,8 +119,14 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [License](#license)
 
-Apache-2.0
+[Apache-2.0](https://github.com/buluma/ansible-role-metricbeat/blob/master/LICENSE).
 
 ## [Author Information](#author-information)
 
 [buluma](https://buluma.github.io/)
+
+Please consider [sponsoring me](https://github.com/sponsors/buluma).
+
+### [Special Thanks](#special-thanks)
+
+Template inspired by [Robert de Bock](https://github.com/robertdebock)
