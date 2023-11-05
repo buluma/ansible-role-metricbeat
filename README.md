@@ -2,9 +2,9 @@
 
 Install and configure Metricbeat, manage Metricbeat modules.
 
-|GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-metricbeat/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-metricbeat/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-metricbeat/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-metricbeat)|[![quality](https://img.shields.io/ansible/quality/58806)](https://galaxy.ansible.com/buluma/metricbeat)|[![downloads](https://img.shields.io/ansible/role/d/58806)](https://galaxy.ansible.com/buluma/metricbeat)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-metricbeat.svg)](https://github.com/buluma/ansible-role-metricbeat/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-metricbeat.svg)](https://github.com/buluma/ansible-role-metricbeat/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-metricbeat.svg)](https://github.com/buluma/ansible-role-metricbeat/pulls/)|
+|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
+|------|------|-------|-------|------|-------------|
+|[![github](https://github.com/buluma/ansible-role-metricbeat/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-metricbeat/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-metricbeat/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-metricbeat)|[![downloads](https://img.shields.io/ansible/role/d/4765)](https://galaxy.ansible.com/buluma/metricbeat)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-metricbeat.svg)](https://github.com/buluma/ansible-role-metricbeat/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-metricbeat.svg)](https://github.com/buluma/ansible-role-metricbeat/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-metricbeat.svg)](https://github.com/buluma/ansible-role-metricbeat/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
