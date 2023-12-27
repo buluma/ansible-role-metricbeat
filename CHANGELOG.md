@@ -2,7 +2,15 @@
 
 ## [Unreleased](https://github.com/buluma/ansible-role-metricbeat/tree/HEAD)
 
-[Full Changelog](https://github.com/buluma/ansible-role-metricbeat/compare/v0.1.3...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-metricbeat/compare/v0.1.4...HEAD)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#12](https://github.com/buluma/ansible-role-metricbeat/issues/12)
+
+## [v0.1.4](https://github.com/buluma/ansible-role-metricbeat/tree/v0.1.4) (2023-12-25)
+
+[Full Changelog](https://github.com/buluma/ansible-role-metricbeat/compare/v0.1.3...v0.1.4)
 
 **Closed issues:**
 
