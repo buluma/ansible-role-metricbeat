@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-metricbeat/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-metricbeat/compare/v0.2.0...HEAD)
+
+**Merged pull requests:**
+
+- Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.5 to 1.0.8 [\#14](https://github.com/buluma/ansible-role-metricbeat/pull/14) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.2.0](https://github.com/buluma/ansible-role-metricbeat/tree/v0.2.0) (2024-01-02)
 
 [Full Changelog](https://github.com/buluma/ansible-role-metricbeat/compare/v0.1.4...v0.2.0)
