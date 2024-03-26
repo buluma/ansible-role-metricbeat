@@ -4,6 +4,10 @@
 
 [Full Changelog](https://github.com/buluma/ansible-role-metricbeat/compare/v0.3.0...HEAD)
 
+**Closed issues:**
+
+- Remove amazonlinux 2023 from meta [\#20](https://github.com/buluma/ansible-role-metricbeat/issues/20)
+
 **Merged pull requests:**
 
 - Bump dependabot/fetch-metadata from 1 to 2 [\#22](https://github.com/buluma/ansible-role-metricbeat/pull/22) ([dependabot[bot]](https://github.com/apps/dependabot))
