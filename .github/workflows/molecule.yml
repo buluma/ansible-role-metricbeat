@@ -50,12 +50,9 @@ jobs:
             tag: "1"
           - image: "amazonlinux"
             tag: "latest"
-<<<<<<< HEAD
-=======
           # TODO: Remove amazonlinux 2023 from meta
           # - image: "amazonlinux"
           #   tag: "2023"
->>>>>>> 3b8f326a4fce7c44277f4bdbba97a20183b62b2a
           - image: "debian-systemd"
             tag: "latest"
           - image: "debian-systemd"
