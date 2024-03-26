@@ -5,13 +5,13 @@
     that:
       - metricbeat_version is defined
       - metricbeat_version is string
-    quiet: yes
+    quiet: true
 
 - name: assert | Test if metricbeat_modules is set correctly
   ansible.builtin.assert:
     that:
       - metricbeat_modules is iterable
-    quiet: yes
+    quiet: true
   when:
     - metricbeat_modules is defined
 
@@ -20,7 +20,7 @@
     that:
       - item.name is defined
       - item.state is defined and item.state in [ "disabled", "enabled" ] or item.state is not defined
-    quiet: yes
+    quiet: true
   loop: "{{ metricbeat_modules }}"
   loop_control:
     label: "{{ item.name }}"
@@ -32,25 +32,25 @@
     that:
       - metricbeat_elasticsearch_hosts is defined
       - metricbeat_elasticsearch_hosts is iterable
-    quiet: yes
+    quiet: true
 
 - name: assert | Test if metricbeat_elasticsearch_username is set correctly
   ansible.builtin.assert:
     that:
       - metricbeat_elasticsearch_username is defined
       - metricbeat_elasticsearch_username is string
-    quiet: yes
+    quiet: true
 
 - name: assert | Test if metricbeat_elasticsearch_password is set correctly
   ansible.builtin.assert:
     that:
       - metricbeat_elasticsearch_password is defined
       - metricbeat_elasticsearch_password is string
-    quiet: yes
+    quiet: true
 
 - name: assert | Test if metricbeat_kibana_host is set correctly
   ansible.builtin.assert:
     that:
       - metricbeat_kibana_host is defined
       - metricbeat_kibana_host is string
-    quiet: yes
+    quiet: true
