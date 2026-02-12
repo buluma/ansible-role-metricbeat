@@ -5,7 +5,7 @@
   gather_facts: true
 
   roles:
-    - role: ansible-role-metricbeat
+    - role: buluma.metricbeat
       metricbeat_elasticsearch_password: "My-P@s5w0rd."
       metricbeat_modules:
         - name: system
