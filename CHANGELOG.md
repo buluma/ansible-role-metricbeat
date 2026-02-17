@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-metricbeat/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-metricbeat/compare/v24.3.31...HEAD)
+
+**Closed issues:**
+
+- Update action [\#11](https://github.com/buluma/ansible-role-metricbeat/issues/11)
+- rebuild action [\#10](https://github.com/buluma/ansible-role-metricbeat/issues/10)
+
 ## [v24.3.31](https://github.com/buluma/ansible-role-metricbeat/tree/v24.3.31) (2024-03-29)
 
 [Full Changelog](https://github.com/buluma/ansible-role-metricbeat/compare/v0.3.0...v24.3.31)
