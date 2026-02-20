@@ -6,7 +6,6 @@ metricbeat_version: "7.17.6"
 
 # A list of modules to enable.
 metricbeat_modules: []
-
 # A list of elasticsearch hosts.
 metricbeat_elasticsearch_hosts:
   - "http://localhost:9200"
