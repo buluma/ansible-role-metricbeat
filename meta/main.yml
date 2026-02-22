@@ -1,10 +1,12 @@
 ---
+dependencies: []
 galaxy_info:
   author: buluma
-  role_name: metricbeat
-  description: Install and configure Metricbeat, manage Metricbeat modules.
-  license: Apache-2.0
   company: ShadowNet
+  description: Install and configure Metricbeat, manage Metricbeat modules.
+  galaxy_tags:
+    - metricbeat
+  license: Apache-2.0
   min_ansible_version: "2.12"
   platforms:
     - name: Amazon
@@ -25,6 +27,4 @@ galaxy_info:
     - name: Kali
       versions:
         - all
-  galaxy_tags:
-    - metricbeat
-dependencies: []
+  role_name: metricbeat

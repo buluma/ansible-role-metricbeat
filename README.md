@@ -11,33 +11,29 @@ Install and configure Metricbeat, manage Metricbeat modules.
 This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-metricbeat/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
 
 ```yaml
----
-- name: Converge
-  hosts: all
-  become: true
+- become: true
   gather_facts: true
-
+  hosts: all
+  name: Converge
   roles:
-    - role: buluma.metricbeat
-      metricbeat_elasticsearch_password: "My-P@s5w0rd."
-      metricbeat_modules:
-        - name: system
-          state: enabled
+  - metricbeat_elasticsearch_password: My-P@s5w0rd.
+    metricbeat_modules:
+    - name: system
+      state: enabled
+    role: buluma.metricbeat
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-metricbeat/blob/master/molecule/default/prepare.yml):
 
 ```yaml
----
-- name: Prepare
-  hosts: all
-  become: true
+- become: true
   gather_facts: false
-
+  hosts: all
+  name: Prepare
   roles:
-    - role: buluma.bootstrap
-    - role: buluma.core_dependencies
-    - role: buluma.elastic_repo
+  - role: buluma.bootstrap
+  - role: buluma.core_dependencies
+  - role: buluma.elastic_repo
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
@@ -47,26 +43,13 @@ Also see a [full explanation and example](https://buluma.github.io/how-to-use-th
 The default values for the variables are set in [`defaults/main.yml`](https://github.com/buluma/ansible-role-metricbeat/blob/master/defaults/main.yml):
 
 ```yaml
----
-# defaults file for metricbeat
-
-# The version of metricbeat to install.
-metricbeat_version: "7.17.6"
-
-# A list of modules to enable.
-metricbeat_modules: []
-# A list of elasticsearch hosts.
 metricbeat_elasticsearch_hosts:
-  - "http://localhost:9200"
-
-# The username for elasticsearch.
+- http://localhost:9200
+metricbeat_elasticsearch_password: ''
 metricbeat_elasticsearch_username: elastic
-
-# The password for elasticsearch.
-metricbeat_elasticsearch_password: ""
-
-# The URL for Kibana.
-metricbeat_kibana_host: "http://localhost:5601"
+metricbeat_kibana_host: http://localhost:5601
+metricbeat_modules: []
+metricbeat_version: 7.17.6
 ```
 
 ## [Requirements](#requirements)
