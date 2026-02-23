@@ -11,29 +11,31 @@ Install and configure Metricbeat, manage Metricbeat modules.
 This example is taken from [`molecule/default/converge.yml`](https://github.com/buluma/ansible-role-metricbeat/blob/master/molecule/default/converge.yml) and is tested on each push, pull request and release.
 
 ```yaml
-- become: true
-  gather_facts: true
-  hosts: all
-  name: Converge
-  roles:
-  - metricbeat_elasticsearch_password: My-P@s5w0rd.
-    metricbeat_modules:
-    - name: system
-      state: enabled
-    role: buluma.metricbeat
+---
+  - become: true
+    gather_facts: true
+    hosts: all
+    name: Converge
+    roles:
+      - metricbeat_elasticsearch_password: My-P@s5w0rd.
+        metricbeat_modules:
+          - name: system
+            state: enabled
+        role: buluma.metricbeat
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-metricbeat/blob/master/molecule/default/prepare.yml):
 
 ```yaml
-- become: true
-  gather_facts: false
-  hosts: all
-  name: Prepare
-  roles:
-  - role: buluma.bootstrap
-  - role: buluma.core_dependencies
-  - role: buluma.elastic_repo
+---
+  - become: true
+    gather_facts: false
+    hosts: all
+    name: Prepare
+    roles:
+      - role: buluma.bootstrap
+      - role: buluma.core_dependencies
+      - role: buluma.elastic_repo
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
@@ -43,9 +45,10 @@ Also see a [full explanation and example](https://buluma.github.io/how-to-use-th
 The default values for the variables are set in [`defaults/main.yml`](https://github.com/buluma/ansible-role-metricbeat/blob/master/defaults/main.yml):
 
 ```yaml
+---
 metricbeat_elasticsearch_hosts:
-- http://localhost:9200
-metricbeat_elasticsearch_password: ''
+  - http://localhost:9200
+metricbeat_elasticsearch_password: ""
 metricbeat_elasticsearch_username: elastic
 metricbeat_kibana_host: http://localhost:5601
 metricbeat_modules: []

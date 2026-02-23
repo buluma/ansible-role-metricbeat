@@ -1,10 +1,11 @@
-- become: true
-  gather_facts: true
-  hosts: all
-  name: Converge
-  roles:
-  - metricbeat_elasticsearch_password: My-P@s5w0rd.
-    metricbeat_modules:
-    - name: system
-      state: enabled
-    role: buluma.metricbeat
+---
+  - become: true
+    gather_facts: true
+    hosts: all
+    name: Converge
+    roles:
+      - metricbeat_elasticsearch_password: My-P@s5w0rd.
+        metricbeat_modules:
+          - name: system
+            state: enabled
+        role: buluma.metricbeat
