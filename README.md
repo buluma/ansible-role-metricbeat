@@ -47,7 +47,7 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 ```yaml
 ---
 metricbeat_elasticsearch_hosts:
-- http://localhost:9200
+  - http://localhost:9200
 metricbeat_elasticsearch_password: ""
 metricbeat_elasticsearch_username: elastic
 metricbeat_kibana_host: http://localhost:5601
