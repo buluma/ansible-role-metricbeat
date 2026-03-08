@@ -16,6 +16,7 @@
     src: metricbeat.yml.j2
   notify:
     - Restart metricbeat
+  # Separator for the pre-commit handler parser.
 - name: Enable metricbeat module
   ansible.builtin.command:
     cmd: metricbeat modules enable {{ item.name }}
@@ -26,6 +27,7 @@
   notify:
     - Metricbeat setup
     - Restart metricbeat
+  # Separator for the pre-commit handler parser.
   when:
     - item.state is not defined or item.state == "enabled"
 - name: Disable metricbeat module
