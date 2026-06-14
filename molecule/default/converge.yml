@@ -1,9 +1,8 @@
 ---
-- become: true
-  gather_facts: true
 - name: Converge
   hosts: all
-  name: Converge
+  become: true
+  gather_facts: true
   roles:
     - metricbeat_elasticsearch_password: My-P@s5w0rd.
       metricbeat_modules:
