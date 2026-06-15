@@ -1,14 +1,13 @@
 ---
-- become: true
-  gather_facts: true
 - name: Verify
   hosts: all
-  name: Verify
+  become: true
+  gather_facts: true
   tasks:
-    - ansible.builtin.command:
-    changed_when: false
+    - name: try metricbeat version
+      ansible.builtin.command:
         cmd: metricbeat version
+      changed_when: false
       failed_when:
         - '"metricbeat version 7" not in metricbeat_test_one.stdout'
-      name: try metricbeat version
       register: metricbeat_test_one
