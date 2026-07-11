@@ -5,7 +5,7 @@
   gather_facts: false
 
   vars:
-    bootstrap_timeout: 120
+    bootstrap_timeout: 300
     bootstrap_wait_for_host: true
 
   pre_tasks:
@@ -54,7 +54,7 @@
 
     - name: Wait for container to be ready
       ansible.builtin.wait_for_connection:
-        timeout: 120
+        timeout: 300
       become: false
 
   roles:
