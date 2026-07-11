@@ -21,6 +21,16 @@
       changed_when: false
       failed_when: false
 
+    - name: Install Elastic GPG key on Debian/Ubuntu
+      ansible.builtin.raw: |
+        if [ -f /etc/debian_version ] && command -v apt-key >/dev/null 2>&1; then
+          apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 46095ACC8548582C1A2699A9D27D666CD88E42B4 2>/dev/null || \
+          curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add - 2>/dev/null || true
+        fi
+      become: false
+      changed_when: false
+      failed_when: false
+
   roles:
     - role: buluma.bootstrap
     - role: buluma.core_dependencies
