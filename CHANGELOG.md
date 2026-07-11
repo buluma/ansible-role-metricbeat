@@ -30,7 +30,6 @@
 **Merged pull requests:**
 
 - Bump dependabot/fetch-metadata from 1 to 2 [\#22](https://github.com/buluma/ansible-role-metricbeat/pull/22) ([dependabot[bot]](https://github.com/apps/dependabot))
-- Bump buluma/dependabot-auto-merge-action from 2.1.1 to 2.1.2 [\#21](https://github.com/buluma/ansible-role-metricbeat/pull/21) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5 to 6 [\#18](https://github.com/buluma/ansible-role-metricbeat/pull/18) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [v0.3.0](https://github.com/buluma/ansible-role-metricbeat/tree/v0.3.0) (2024-01-20)
@@ -39,6 +38,7 @@
 
 **Merged pull requests:**
 
+- Bump buluma/dependabot-auto-merge-action from 2.1.1 to 2.1.2 [\#21](https://github.com/buluma/ansible-role-metricbeat/pull/21) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/molecule-action from 6.0.1 to 6.0.3 [\#17](https://github.com/buluma/ansible-role-metricbeat/pull/17) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/molecule-action from 6.0.0 to 6.0.1 [\#16](https://github.com/buluma/ansible-role-metricbeat/pull/16) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.5 to 1.0.8 [\#14](https://github.com/buluma/ansible-role-metricbeat/pull/14) ([dependabot[bot]](https://github.com/apps/dependabot))
