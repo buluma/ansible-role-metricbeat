@@ -11,6 +11,23 @@
       changed_when: false
       failed_when: false
 
+    - name: Configure passwordless sudo for current user
+      ansible.builtin.raw: |
+        if id -u 1000 >/dev/null 2>&1; then
+          USER=$(id -un 1000)
+          echo "$USER ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/99-molecule
+          chmod 440 /etc/sudoers.d/99-molecule
+        elif [ -n "$SUDO_USER" ]; then
+          echo "$SUDO_USER ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/99-molecule
+          chmod 440 /etc/sudoers.d/99-molecule
+        else
+          echo "root ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/99-molecule
+          chmod 440 /etc/sudoers.d/99-molecule
+        fi
+      become: false
+      changed_when: false
+      failed_when: false
+
     - name: Install Debian/Ubuntu GPG keys if missing
       ansible.builtin.raw: |
         if [ -f /etc/debian_version ]; then
