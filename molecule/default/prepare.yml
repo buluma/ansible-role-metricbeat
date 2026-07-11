@@ -4,6 +4,10 @@
   become: true
   gather_facts: false
 
+  vars:
+    bootstrap_timeout: 120
+    bootstrap_wait_for_host: true
+
   pre_tasks:
     - name: Install sudo if missing
       ansible.builtin.raw: "{{ ansible_pkg_mgr | default('dnf') }} install -y sudo"
@@ -47,6 +51,11 @@
       become: false
       changed_when: false
       failed_when: false
+
+    - name: Wait for container to be ready
+      ansible.builtin.wait_for_connection:
+        timeout: 120
+      become: false
 
   roles:
     - role: buluma.bootstrap
