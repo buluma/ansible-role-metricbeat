@@ -9,12 +9,9 @@ platforms:
   - name: Debian
     versions:
       - all
-  - name: Fedora
-    versions:
-      # Excludes 45: it ships Python 3.15.0b3, whose dataclasses module
-      # dropped _is_type, breaking ansible-core's AnsiballZ module wrapper.
-      - "44"
-      - "43"
+  # Fedora is excluded: buluma.elastic_repo (a dependency) deliberately
+  # skips adding the yum repo on Fedora (Elastic's 7.x yum repo doesn't
+  # support it), so metricbeat could never install there anyway.
   - name: Ubuntu
     versions:
       - all
