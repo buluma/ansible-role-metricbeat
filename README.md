@@ -39,7 +39,24 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 
   pre_tasks:
     - name: Install sudo if missing
-      ansible.builtin.raw: "{{ ansible_pkg_mgr | default('dnf') }} install -y sudo"
+      ansible.builtin.raw: >-
+        if command -v apt-get >/dev/null 2>&1; then apt-get update && apt-get install -y sudo;
+        elif command -v dnf >/dev/null 2>&1; then dnf install -y sudo;
+        elif command -v yum >/dev/null 2>&1; then yum install -y sudo;
+        elif command -v zypper >/dev/null 2>&1; then zypper -n install sudo;
+        fi
+      become: false
+      changed_when: false
+      failed_when: false
+
+    - name: Install python3 if missing
+      ansible.builtin.raw: >-
+        if [ -x /usr/bin/python3 ]; then exit 0; fi;
+        if command -v apt-get >/dev/null 2>&1; then apt-get update && apt-get install -y python3;
+        elif command -v dnf >/dev/null 2>&1; then dnf install -y python3;
+        elif command -v yum >/dev/null 2>&1; then yum install -y python3;
+        elif command -v zypper >/dev/null 2>&1; then zypper -n install python3;
+        else exit 1; fi
       become: false
       changed_when: false
       failed_when: false
@@ -106,7 +123,7 @@ metricbeat_elasticsearch_password: ""
 metricbeat_elasticsearch_username: elastic
 metricbeat_kibana_host: "http://localhost:5601"
 metricbeat_modules: []
-metricbeat_version: "7.17.6"
+metricbeat_version: "7.17.29"
 ```
 
 ## [Requirements](#requirements)
@@ -139,7 +156,6 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |---------|----|
 |[EL](https://hub.docker.com/r/buluma/docker-molecule-images)|10, 9|
 |[Debian](https://hub.docker.com/r/buluma/docker-molecule-images)|all|
-|[Fedora](https://hub.docker.com/r/buluma/docker-molecule-images)|44, 43|
 |[Ubuntu](https://hub.docker.com/r/buluma/docker-molecule-images)|all|
 
 The minimum version of Ansible required is 2.19, tests have been done on:
